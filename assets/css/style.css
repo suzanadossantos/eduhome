@@ -474,7 +474,43 @@ body{
 /*-----------------------------------*\
     #ABOUT
 \*-----------------------------------*/
-  
+.about {padding-block-start:0;}
+.about-banner {
+    background-color: var(--light-gray);
+    max-width: max-content;
+    aspect-ratio: 450/590;
+    margin-block-end: 40px;
+}  
+
+.about-img { border-radius: var(--radius-6);}
+
+.about-list { margin-block: 40px 60px;}
+
+.about-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 250px;
+}
+
+.about-item .item-icon {
+    padding: 150px;
+    border-radius: 50%;
+}
+
+.about-item .item-icon-1 { background-color: var(--orange-peel_10);}
+.about-item .item-icon-2 { background-color: var(--ultramarine-blue_10);}
+.about-item .item-icon-3 { background-color: var(--coral_10);}
+
+.about-item .item-title {
+    line-height: 1.6;
+    margin-block-end: 5px;
+}
+
+
+.about-item .item-text { font-weight: var(--fw-500); }
+
+
+
 /*-----------------------------------*\
     #COURSE
 \*-----------------------------------*/
