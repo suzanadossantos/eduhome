@@ -1023,21 +1023,54 @@ body {
      * CUSTOM PROPERTY
      */
 
+     :root {
+
+        /**
+        * typography
+        */
+
+        --fs-2: 4rem;
+
+     }
+
     /**
      * REUSED STYLE
      */
 
+     .container {
+        max-width: 540px;
+        margin-inline: auto;
+     }
+
+
     /**
      * HEADER
      */
+     .header .container { max-width: unset;}
 
     /**
      * ABOUT
      */
 
+     .about-banner {position: relative;}
+
+     .about .abs-img-1 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        border-radius: var(--radius-4);
+     }
+
+
     /**
      * FOOTER
      */
+
+     .footer-top {grid-template-columns: 1fr 1fr;}
+
+     .footer-brand {grid-column: 1 / 3;}
 
     /**
    * responsive for larger than 768px screen
@@ -1050,35 +1083,110 @@ body {
      * REUSED STYLE
      */
 
+     .container {max-width: 740px;}
+
+     .grid-list {grid-template-columns: 1fr 1fr;}
+
     /**
      * HEADER
      */
+
+     .header .container {padding-inline: 30px;}
+
+     .header-actions {gap: 15px;}
+
+     .header-action-btn:not(.login-btn) {padding: 17px;}
+
+     .login-btn .span {display: block;}
+
+     .login-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: var(--ultramarine-blue);
+        color: var(--white);
+        min-height: 50px;
+        padding-inline: 25px;
+        font-weight: var(--fw-700);
+        transition: var(--transition-1);
+     }
+
+     .login-btn ion-icon {--ionicon-stroke-width: 70px;}
+
+     .login-btn:is(:hover, :focus) {background-color: var(--space-cadet-2);}
 
     /**
      * HERO
      */
 
+     .hero-text {--fs: 2rem;}
+
     /**
      * ABOUT
      */
+
+     .about-banner {margin-inline: 120px 130px;}
+
+     .about .abs-img-2 {
+        display: block;
+        position: absolute;
+        top: 15%;
+        left: -120px;
+        border-radius: var(--radius-4);
+        z-index: -1;
+     }
+
+     .about .abs-img-1 {right: -130px;}
 
     /**
      * COURSE
      */
 
+     .course-card .card-content {
+        padding-inline: 30px;
+        padding-block-end: 30px;
+     }
+
     /**
      * EVENT
      */
+
+     .event-card .card-content {
+        padding: 30px;
+     }
 
     /**
      * NEWSLETTER
      */
 
+     .newsletter-form {position: relative;}
+
+     .newsletter .btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+     }
+
+     .email-field {
+        padding-inline-end: 190px;
+        margin-block-end: 0;
+     }
+
     /**
      * FOOTER
      */
 
-    /**
+     .footer-top {
+        gap: 30px;
+        padding-block: 80px 70px;
+     }
+
+     .footer-brand {grid-column: auto;}
+
+     .footer-bottom {padding-block: 30px;}
+
+  /**
    * responsive for larger than 992px screen
    */
 }
@@ -1089,33 +1197,110 @@ body {
      * CUSTOM PROPERTY
      */
 
+     :root {
+
+        /**
+        * typography
+        */
+
+        --fs-1: 5rem;
+
+        /**
+        * spacing
+        */
+
+        --section-padding: 120px;
+
+     }
+
     /**
      * REUSED STYLE
      */
+
+     .container {max-width: 960px;}
 
     /**
      * HERO
      */
 
+     .hero {overflow: hidden;}
+
+     .hero .container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+     }
+
+     .hero .abs-img {
+        display: block;
+        position: absolute;
+     }
+
+     .hero-banner {
+        position: relative;
+        padding-inline-end: 50px;
+        margin-block-start: 180px;
+     }
+
+     .hero .abs-img-1 {
+        width: 250px;
+        right: -100px;
+        top: -60px;
+     }
+
+     .hero .abs-img-2 {
+        top: -180px;
+        right: 80px;
+     }
+
     /**
      * CATEGORY
      */
+
+     .category .grid-list {grid-template-columns: repeat(3, 1fr);}
+
+     .category-card {height: 100%;}
 
     /**
      * CTA
      */
 
+     .cta .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+     }
+
+     .cta .section-text {margin-block: 30px;}
+
+     .cta-banner {
+        margin-block-end: 0;
+        order: 1;
+     }
+
     /**
      * EVENT
      */
+
+     .event-card .card-address {--fs-6: 1.6rem;}
+
 
     /**
      * NEWSLETTER
      */
 
+     .newsletter .section-title {margin-block-end: 60px;}
+
+     .newsletter-form {
+        max-width: 650px;
+        margin-inline: auto;
+     }
+
     /**
      * FOOTER
      */
+
+     .footer-top {grid-template-columns: 1.5fr 1fr 1fr 1fr;}
 
     /**
    * responsive for larger than 1200px screen
@@ -1127,29 +1312,88 @@ body {
      * CUSTOM PROPERTY
      */
 
+     :root {
+
+        /**
+        * typography
+        */
+
+        --fs-1: 6.8rem;
+     }
+
         /**
      * REUSED STYLE
      */
+
+     .container {max-width: 1180px;}
 
         /**
      * HEADER
      */
 
+     .nav-open-btn,
+     .navbar-top,
+     .overlay {display: none;}
+
+     .header {padding-block: 40px;}
+
+     .header.active {padding-block: 15px;}
+
+     .header.header-anim {animation: slide-in 1s ease forwards;}
+
+     @keyframes slide-in {
+        0% {transform: translateY(-100%);}
+        100% {transform: translateY(0);}
+     }
+
+     .navbar,
+     .navbar.active {all: unset;}
+
+     .navbar-list {
+        display: flex;
+        gap: 10px;
+        padding: 0;
+     }
+
+     .navbar-item:not(:last-child) {border-block-end: none;}
+
+     .navbar-link {
+        color: var(--space-cadet-2);
+        font-weight: var(--fw-600);
+        padding-inline: 10px;
+     }
+
         /**
      * HERO
      */
+
+     .hero .abs-img-1 {width: max-content;}
+
+     .hero .abs-img-2 {right: 120px;}
 
 
         /**
      * ABOUT
      */
 
+     .about .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px
+     }
+
+     .about-banner {margin-inline-start: -30px;}
+
         /**
      * COURSE, EVENT
      */
 
+     :is(.course, .event) .grid-list {grid-template-columns: repeat(3, 1fr);}
+
         /**
      * FOOTER
      */
+
+     .footer-top {padding-block: 120px 80px;}
     }
 }
